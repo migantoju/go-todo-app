@@ -175,8 +175,6 @@ func (t *Todo) Update() error {
 		return err
 	}
 
-	var todo Todo
-
 	defer stmt.Close()
 
 	row, err := stmt.Exec(t.Title, t.Description, t.IsComplete)
